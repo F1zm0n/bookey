@@ -1,0 +1,8 @@
+version: "2"
+sql:
+  - schema: "internal/bookey/repository/migrations/schema"
+    queries: "internal/bookey/repository/migrations/queries"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/bookey/repository/migrations/sqlc"
