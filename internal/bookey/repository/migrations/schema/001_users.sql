@@ -5,9 +5,10 @@ CREATE TABLE Users (
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
-    balance DECIMAL(10, 2) NOT NULL
+    balance INTEGER NOT NULL
 );
-
+CREATE INDEX idx_user_id ON Users (user_id);
 -- +goose Down
 
 DROP TABLE Users;
+-- DROP INDEX idx_user_id;

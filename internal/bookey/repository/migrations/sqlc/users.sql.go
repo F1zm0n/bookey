@@ -22,7 +22,7 @@ type CreateUserParams struct {
 	Username     string
 	Email        string
 	PasswordHash string
-	Balance      string
+	Balance      int32
 }
 
 func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, error) {
@@ -33,6 +33,42 @@ func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, e
 		arg.PasswordHash,
 		arg.Balance,
 	)
+	var i User
+	err := row.Scan(
+		&i.UserID,
+		&i.Username,
+		&i.Email,
+		&i.PasswordHash,
+		&i.Balance,
+	)
+	return i, err
+}
+
+const deleteUser = `-- name: DeleteUser :exec
+DELETE FROM Users WHERE user_id=$1 AND password_hash=$2
+`
+
+type DeleteUserParams struct {
+	UserID       uuid.UUID
+	PasswordHash string
+}
+
+func (q *Queries) DeleteUser(ctx context.Context, arg DeleteUserParams) error {
+	_, err := q.db.ExecContext(ctx, deleteUser, arg.UserID, arg.PasswordHash)
+	return err
+}
+
+const getUser = `-- name: GetUser :one
+SELECT user_id, username, email, password_hash, balance FROM Users WHERE user_id=$1 AND password_hash=$2
+`
+
+type GetUserParams struct {
+	UserID       uuid.UUID
+	PasswordHash string
+}
+
+func (q *Queries) GetUser(ctx context.Context, arg GetUserParams) (User, error) {
+	row := q.db.QueryRowContext(ctx, getUser, arg.UserID, arg.PasswordHash)
 	var i User
 	err := row.Scan(
 		&i.UserID,

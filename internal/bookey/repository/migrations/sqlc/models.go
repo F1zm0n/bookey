@@ -16,13 +16,15 @@ type Book struct {
 	Author      string
 	Description string
 	Genre       string
-	Price       string
-	UserID      uuid.NullUUID
+	Price       int32
+	UserID      uuid.UUID
+	CreatedAt   time.Time
 }
 
 type Transaction struct {
 	TransactionID   uuid.UUID
-	UserID          uuid.UUID
+	FromUserID      uuid.UUID
+	ToUserID        uuid.UUID
 	Amount          string
 	Description     string
 	TransactionDate time.Time
@@ -33,5 +35,5 @@ type User struct {
 	Username     string
 	Email        string
 	PasswordHash string
-	Balance      string
+	Balance      int32
 }
