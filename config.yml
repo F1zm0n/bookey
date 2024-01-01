@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+db:
+  postgres:
+    driver: postgres
+    user: postgres
+    name: bookey
+    password: F1zm0_007
+    sslmode: disable
