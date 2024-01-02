@@ -1,4 +1,4 @@
-module bookey
+module github.com/F1zm0n/bookey
 
 go 1.21
 
