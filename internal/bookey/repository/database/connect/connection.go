@@ -1,9 +1,9 @@
 package connect
 
 import (
-	logging "bookey/pkg/logger"
 	"database/sql"
 	"fmt"
+	logging "github.com/F1zm0n/bookey/pkg/logger"
 )
 
 func Connection(driver, user, name, password, sslmode string, Logger *logging.Logger) (*sql.DB, error) {

@@ -1,11 +1,11 @@
 package database
 
 import (
-	"bookey/internal/bookey/entity"
-	"bookey/internal/bookey/repository/migrations/sqlc"
 	"context"
 	"database/sql"
 	"fmt"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
 	"github.com/google/uuid"
 	"strconv"
 	"time"

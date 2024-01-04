@@ -1,11 +1,11 @@
 package main
 
 import (
-	"bookey/internal/bookey/delivery/http/handlers"
-	"bookey/internal/bookey/repository/database/connect"
-	"bookey/internal/bookey/repository/migrations/sqlc"
-	"bookey/pkg/config"
-	logging "bookey/pkg/logger"
+	"github.com/F1zm0n/bookey/internal/bookey/delivery/http/handlers"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/database/connect"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
+	"github.com/F1zm0n/bookey/pkg/config"
+	logging "github.com/F1zm0n/bookey/pkg/logger"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )

@@ -1,6 +1,6 @@
 package entity
 
-import "bookey/internal/bookey/repository/migrations/sqlc"
+import "github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
 
 func UserToUserDTO(user *sqlc.User) *UserDTO {
 	NewUserDTO := &UserDTO{

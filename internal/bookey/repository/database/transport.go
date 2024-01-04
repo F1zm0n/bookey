@@ -1,11 +1,11 @@
 package database
 
 import (
-	"bookey/internal/bookey/entity"
-	"bookey/internal/bookey/repository/migrations/sqlc"
-	logging "bookey/pkg/logger"
 	"context"
 	"database/sql"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
+	logging "github.com/F1zm0n/bookey/pkg/logger"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )

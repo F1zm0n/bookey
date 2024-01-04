@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"bookey/internal/bookey/repository/migrations/sqlc"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
 )
 
 func BookToBookDTO(book *sqlc.Book) *BookDTO {

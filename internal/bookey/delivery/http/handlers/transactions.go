@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"bookey/internal/bookey/entity"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
 	"github.com/gin-gonic/gin"
 )
 

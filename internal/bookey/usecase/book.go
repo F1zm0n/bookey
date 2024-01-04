@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"bookey/internal/bookey/entity"
-	"bookey/internal/bookey/repository/migrations/sqlc"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"time"

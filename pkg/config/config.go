@@ -1,7 +1,7 @@
 package config
 
 import (
-	logging "bookey/pkg/logger"
+	logging "github.com/F1zm0n/bookey/pkg/logger"
 	"github.com/ilyakaznacheev/cleanenv"
 	"sync"
 )

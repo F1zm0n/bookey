@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"bookey/internal/bookey/entity"
 	"fmt"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"strconv"

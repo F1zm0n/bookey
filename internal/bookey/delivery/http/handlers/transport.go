@@ -1,11 +1,11 @@
 package handlers
 
 import (
-	"bookey/internal/bookey/entity"
-	"bookey/internal/bookey/repository/migrations/sqlc"
-	"bookey/internal/bookey/usecase"
-	logging "bookey/pkg/logger"
 	"database/sql"
+	"github.com/F1zm0n/bookey/internal/bookey/entity"
+	"github.com/F1zm0n/bookey/internal/bookey/repository/migrations/sqlc"
+	"github.com/F1zm0n/bookey/internal/bookey/usecase"
+	logging "github.com/F1zm0n/bookey/pkg/logger"
 	"github.com/gin-gonic/gin"
 )
 
